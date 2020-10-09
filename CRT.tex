@@ -305,4 +305,17 @@ Man geht wie folgt vor:
     \item $(4\cdot7\cdot1\cdot2)+(1\cdot3\cdot7\cdot2)+(3\cdot4\cdot3\cdot0) = \boxed{98\equiv14 \mod{84}}$
   \end{enumerate}
 \end{beispiel}
+%--------------------------------------------------------------------------------------------------------------
+\chapter{Euklidischer Algorithmus}
+Der Euklidische Algorithmus kann dafür genutzt werden, um den größten gemeinsamen Teiler zu bestimmen \textit{ggT(a,b)}. Jedoch kann der erweiterte Euklidische Algorithmus auch dafür genutzt werden, um die Multiplikative Inverse von $ e \equiv a^{-1}\cdot a \mod{b} $ zu bestimmen. Jedoch kann diese nur gefunden werden, wenn der \textit{ggT(a,b) = 1} ist.
+
+\section{Algorithmus}
+Um den größten gemeinsamen Teiler von \textit{ggT(a,b)} zu bestimmen, gehe man wie folgt vor, schreibe untereinander:
+\begin{enumerate}
+  \item Wie oft passt a ganzzahlig in b ? \rightarrow \,\,$\!b = x\,\cdot\,a$ 
+  \item entsteht ein Restm, dann Addiere \rightarrow \,\,$\!b = x\,\cdot\, a\,\,\,+ r$
+  \item Ist der Rest = 0, dann ist der ggT(a,b) der vorherige Rest. 
+\end{enumerate}
+\section{erweiterter Algorithmus}
+
 \end{document}
