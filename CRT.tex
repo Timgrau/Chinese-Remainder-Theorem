@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{blindtext, amsmath, amssymb, amsthm}
+\usepackage{empheq}
 
 \newtheorem{definition}{Definition}[section]
 \newtheorem{lemma}[definition]{Lemma}
@@ -312,10 +313,35 @@ Der Euklidische Algorithmus kann dafür genutzt werden, um den größten gemeins
 \section{Algorithmus}
 Um den größten gemeinsamen Teiler von \textit{ggT(a,b)} zu bestimmen, gehe man wie folgt vor, schreibe untereinander:
 \begin{enumerate}
-  \item Wie oft passt a ganzzahlig in b ? \rightarrow \,\,$\!b = x\,\cdot\,a$ 
-  \item entsteht ein Restm, dann Addiere \rightarrow \,\,$\!b = x\,\cdot\, a\,\,\,+ r$
+  \item Wie oft passt a ganzzahlig in b  \rightarrow \,\,$\!b = x\,\cdot\,a$ 
+  \item entsteht ein Rest m, dann Addiere \rightarrow \,\,$\!b = x\,\cdot\, a\,\,\,+ r$
   \item Ist der Rest = 0, dann ist der ggT(a,b) der vorherige Rest. 
 \end{enumerate}
 \section{erweiterter Algorithmus}
 
+
+\chapter{Permutation}
+Unter einer Permutation versteht man eine Anordnung von Objekten in einer bestimmten Reihenfolge. Man unterscheidet zwischen einer Permutation mit und ohne Wiederholung. Wobei die Permutation mit Wiederholung bestimmte Elemente mehrmals enthalten kann und die Permutation ohne Wiederholung Elemente nur einmalig enthält.\\ Betrachtet man eine Klasse $G$ mit $(a_{1},\ldots ,a_{n})$ Plätzen und $(1,\ldots, n)$ Schüler. Ordnet man jedem Schüler dieser Klasse einen Platz zu, dann wäre z.B eine Permutation $\pi$, wenn jeder Schüler mit seinem dazugehörigen Nachbarn die Plätze tauscht. \textit{(Natürlich gehe man dann in diesem Szenario davon aus, dass jeder Schüler einen dazu gehörigen Nachbarn besitzt, bzw. die Klasse eine gerade Anzahl an Schüler besitzt)}.\\ Selbst wenn das nicht gegeben wäre und einer Person auf ihren vorherigen Platz sitzen bliebe, würden wir diesen Vorgang als eine Permutation bezeichnen denn.
+\begin{definition}
+  Eine Permutation ist eine bijektive Abbildung einer n-elementigen Menge $G$ auf sich selbst man schreibt
+  \begin{empheq}[box=\fbox]{align}
+    &\pi\colon G \rightarrow G \nonumber\\
+    \pi \colon = &(a_{1}, a_{2}, \ldots ,a_{n}) \nonumber
+    \end{empheq}
+\end{definition}
+\section{identische Abbildung}
+Nun iteriert man Schüler und Plätze eindeutig, sitzt Schüler 1 auf Platz 1, Schüler 2 auf Platz 2 usw. bis Schüler n auf Platz n sitzt.
+\begin{align}
+\pi\colon \,\,\,\,\,\,\, 1&\rightarrow a_{1} \nonumber \\ 
+2&\rightarrow a_{2} \nonumber \\
+&\,\,\,\,\vdots \nonumber \\
+n&\rightarrow a_{n} \nonumber
+\end{align}
+Dies bezeichnet man als \textit{identische Abbildung} einer Permutation und nutzt die verkürzte Schreibweise $id(\pi) \colon = (1,2,3,\ldots,n)$. Auch bekannt als Neutrales Element aus $\pi$.\\
+Auch das inverse zum Neutralen Element besitzt eine bestimmte Permutation die \textit{inverse Permutation} mit $\bar\pi\colon=(n,n-1,\ldots,1)$.
+\section{Schreibweisen}
+\subsection{Zweilzeilenform}
+\subsection{Tupelschreibweise}
+\subsection{Zyklenschreibweise}
+\subsection{Permutationsmatrix}
 \end{document}
